@@ -275,6 +275,7 @@ body {
     aspect-ratio: 2/1;
     height: auto;
     margin-bottom: 20px;
+    border-radius: 2.5px;
 }
 
 .service-title {
@@ -322,8 +323,9 @@ body {
 
 .package-item {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding-bottom: 20px;
     border-radius: 5px;
+    overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -371,10 +373,6 @@ body {
 @media only screen and (max-width: 768px) {
     .packages-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .package-item {
-        padding: 15px;
     }
 
     .package-title {
@@ -513,6 +511,14 @@ body {
     .contact-form,
     .contact-info {
         max-width: 100%;
+    }
+    
+    .contact-info{
+        margin-top: 25px ;
+    }
+
+    .contact-form .btn {
+        width: 100%;
     }
 
     .contact-form .section-title {
