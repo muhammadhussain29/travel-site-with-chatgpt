@@ -1,0 +1,616 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 70px;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.main-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+}
+
+.cta .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta .btn:hover {
+    background-color: #0056b3;
+}
+.toggle-menu{
+    display: none;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 600px) {
+    .main-header {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .main-nav{
+        display: none;
+    }
+    .main-nav ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .toggle-menu {
+        display: block;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .toggle-menu:hover {
+        background-color: #0056b3;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+}
+
+/* Previous CSS from header example */
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Hero Section */
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero .btn {
+        padding: 12px 24px;
+    }
+}
+/* Previous CSS from header and hero examples */
+
+/* Destinations Section Styles */
+.destinations {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.destination-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.destination-item img {
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    border-bottom: 1px solid #ccc;
+}
+
+.destination-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.destination-description {
+    font-size: 16px;
+    color: #666;
+    margin: 5px;
+    padding: 0 10px;
+}
+
+.destinations .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.destinations .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Destinations Section */
+@media only screen and (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .destination-item {
+        margin: 0 10px;
+    }
+    
+    .destination-title {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    
+    .destination-description {
+        font-size: 14px;
+    }
+
+    .destinations .btn {
+        padding: 8px 16px;
+    }
+}
+/* Previous CSS from header, hero, and destinations examples */
+
+/* Services Section Styles */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-item img {
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.service-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Media Query for Services Section */
+@media only screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-description {
+        font-size: 14px;
+    }
+}
+/* Previous CSS from header, hero, destinations, and services examples */
+
+/* Featured Packages Section Styles */
+.featured-packages {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.package-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.package-item img {
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.package-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.package-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.package-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.featured-packages .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.featured-packages .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Featured Packages Section */
+@media only screen and (max-width: 768px) {
+    .packages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .package-item {
+        padding: 15px;
+    }
+
+    .package-title {
+        font-size: 20px;
+    }
+
+    .package-description {
+        font-size: 14px;
+    }
+
+    .package-price {
+        font-size: 18px;
+    }
+}
+/* Previous CSS from header, hero, destinations, services, and featured packages examples */
+
+/* About Us Section Styles */
+.about-us {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us .section-title {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+/* Previous CSS from header, hero, destinations, services, featured packages, about us, and footer examples */
+
+/* Contact Section Styles */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form .section-title {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    position: relative;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* .contact-info {
+    max-width: 400px;
+    width: 100%;
+} */
+
+.contact-info .info-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Media Query for Contact Section */
+@media only screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        max-width: 100%;
+    }
+
+    .contact-form .section-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    .contact-info .info-title {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+/* Previous CSS from header, hero, destinations, services, featured packages, and about us examples */
+
+/* Footer Section Styles */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-width: 70px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.footer-nav ul li {
+    margin: 20px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+    color: #007bff;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+}
+/* Media Query for Footer */
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-nav ul li {
+        margin: 4px;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+}
